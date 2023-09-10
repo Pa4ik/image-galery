@@ -43,6 +43,7 @@ const checkCardBtn = document.querySelector('.button-check-card');
 if (localStorage.getItem('userRegistered') !== 'true') {
 checkCardBtn.addEventListener('click', (event) => {
 //отключить кнопку 
+event.stopPropagation();
 event.preventDefault();
 });
 //отключить дефолтное поведение 
