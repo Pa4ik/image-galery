@@ -12,7 +12,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link href="https://fonts.googleapis.com/css2?family=Forum&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-</head>
 <body>
     <div class="warp">
         <header>
@@ -27,11 +26,24 @@
                     <li class="nav-button"><a class="navigation" href="#digital-library-cards">Library Card</a></li>
                 </ul>  
                 </nav>
-                <svg class="profil icon-youtube" width="28" height="28" viewBox="0 0 28 28"   xmlns="http://www.w3.org/2000/svg">
-                    <g id="icon_profile">
-                    <path id="Subtract" fill-rule="evenodd" clip-rule="evenodd" d="M28 14C28 21.732 21.732 28 14 28C6.26801 28 0 21.732 0 14C0 6.26801 6.26801 0 14 0C21.732 0 28 6.26801 28 14ZM18.6667 7.77778C18.6667 10.3551 16.5774 12.4444 14.0001 12.4444C11.4227 12.4444 9.33339 10.3551 9.33339 7.77778C9.33339 5.20045 11.4227 3.11111 14.0001 3.11111C16.5774 3.11111 18.6667 5.20045 18.6667 7.77778ZM19.4998 16.2781C20.9584 17.7367 21.7778 19.715 21.7778 21.7778H14L6.22225 21.7778C6.22225 19.715 7.0417 17.7367 8.50031 16.2781C9.95893 14.8194 11.9372 14 14 14C16.0628 14 18.0411 14.8194 19.4998 16.2781Z" fill="white"/>
-                    </g>
+                <div class="menu-profile">
+                    <svg class="profil" width="28" height="28" viewBox="0 0 28 28"   xmlns="http://www.w3.org/2000/svg">
+                        <g id="icon_profile">
+                        <path id="Subtract" fill-rule="evenodd" clip-rule="evenodd" d="M28 14C28 21.732 21.732 28 14 28C6.26801 28 0 21.732 0 14C0 6.26801 6.26801 0 14 0C21.732 0 28 6.26801 28 14ZM18.6667 7.77778C18.6667 10.3551 16.5774 12.4444 14.0001 12.4444C11.4227 12.4444 9.33339 10.3551 9.33339 7.77778C9.33339 5.20045 11.4227 3.11111 14.0001 3.11111C16.5774 3.11111 18.6667 5.20045 18.6667 7.77778ZM19.4998 16.2781C20.9584 17.7367 21.7778 19.715 21.7778 21.7778H14L6.22225 21.7778C6.22225 19.715 7.0417 17.7367 8.50031 16.2781C9.95893 14.8194 11.9372 14 14 14C16.0628 14 18.0411 14.8194 19.4998 16.2781Z" fill="white"/>
+                        </g>
                     </svg>
+                    <div class="profil profil-autro" style="display: none;">
+                        <span><span>                     
+                    </div>
+                    <div class="drop-menu-profile">
+                        <ul class="list-account-link">
+                            <strong class="profile-account">Profile</strong>
+                            <hr class="menu-line-account">
+                            <li class="account-li"><button class="button-log-in-profile account-li ">Log In</button></li>
+                            <li class="account-li"><button class="button-rigister-profile account-li">Register</button></li>
+                        </ul>
+                    </div>
+                </div>
                 <button class="nav-burger" data-burger>
                     <span class="burger__line"></span>
                 </button>
@@ -54,24 +66,54 @@
                     <div class="about-text">
                         The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside 
                     </div>
-                    <div class="about-img">
+                        <!-- Slider main container -->
+                    <div class="swiper">
+                     <!-- Additional required wrapper -->
+                          <div class="swiper-wrapper">
+                           <!-- Slides -->
+                            <div class="swiper-slide"><img  src="image/image1.png" alt="image-1"></div>
+                             <div class="swiper-slide"><img  src="image/image2.png" alt="image-2"></div>
+                             <div class="swiper-slide"><img  src="image/image3.png" alt="image-3"></div>
+                             <div class="swiper-slide"><img  src="image/image4.png" alt="image-4"></div>
+                             <div class="swiper-slide"><img  src="image/image5.png" alt="image-5"></div>                   
+                            </div>
+                       <!-- If we need pagination -->
+                       <div class="swiper-pagination "><div class="slider-button-back"><div class="slider-button-two"></div></div></div>
+                      
+  
+                            <!-- If we need navigation buttons -->
+                         <svg class="swiper-button-prev hiden-cur" xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                            <path d="M15 7.5L9 12.5L15 17.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                         <svg class="swiper-button-next hiden-cur" xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                            <path d="M9 17.5L15 12.5L9 7.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div class="swiper-pagination"></div>
+                               
+                    </div>
+                    
+                    <!-- <div class="about-img">
                         <svg class="carret-left" xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                             <path d="M15 7.5L9 12.5L15 17.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                        <img class="slider" src="image/image1.png" alt="image-1">
-                        <img class="slider image-2" src="image/image2.png" alt="image-2">
-                        <img class="slider image-3" src="image/image3.png" alt="image-3">
+                        <div class="slider">
+                            <img  src="image/image1.png" alt="image-1">
+                            <img  src="image/image2.png" alt="image-2">
+                            <img  src="image/image3.png" alt="image-3">
+                            <img  src="image/image4.png" alt="image-4">
+                            <img  src="image/image5.png" alt="image-5">
+                        </div>
                         <svg class="carret-right" xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                             <path d="M9 17.5L15 12.5L9 7.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                    </div>
-                    <div class="slider-button">
-                        <div class="slider-button-back"><div class="slider-button-one"></div></div>
+                    </div>-->
+                    <!-- <div class="slider-button">
+                        <div class="slider-button-back active"><div class="slider-button-one"></div></div>
                         <div class="slider-button-back"><div class="slider-button-two"></div></div>
                         <div class="slider-button-back"><div class="slider-button-three"></div></div>
-                        <div class="slider-button-back"><div class="slider-button-four"></div></div>
-                        <div class="slider-button-back"><div class="slider-button-five"></div></div>
-                    </div>
+                        <div class="slider-button-back "><div class="slider-button-four"></div></div>
+                        <div class="slider-button-back "><div class="slider-button-five"></div></div>
+                    </div>  -->
                 </div>                
             </section>
             <section class="favorites" id="favorites">
@@ -106,10 +148,9 @@
                                 <span class="span-season">Autumn</span>
                            </label>
                         </div> 
-
                     </div>
                     <div class="favorites-book">
-                    <div class="winter-book-list">
+                    <div class="winter-book-list book-active active ">
                         <div class="book-list">
                             <div class="first-book">
                                 <h4 class="Staff-Picks">Staff Picks</h4>
@@ -120,8 +161,8 @@
                                     <span class="writer-book">By Sunyi Dean</span>
                                 </h3>
                                 <p class="book-text">An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.</p>
+                                <div class="btn-byu-book"id="1"> <button class="buy-book" >Buy</button></div>
                                 <img class="winter-book" src="image/book-winter-1.png" alt="book-winter-1">
-                                <button class="buy-book">Buy</button>
                             </div>
                             <div class="second-book">
                                 <h4 class="Staff-Picks">Staff Picks</h4>
@@ -132,8 +173,8 @@
                                     <span class="writer-book">By Rachel Harrison</span>
                                 </h3>
                                 <p class="book-text">Are your Halloween movies of choice The Witches of Eastwick and Practical Magic? Look no further than here - where a woman recovering from a breakup moves to a quaint town in upstate New York and befriends a beautiful witch.</p>
+                                <div class="btn-byu-book"id="2"> <button class="buy-book" >Buy</button></div>
                                 <img class="winter-book" src="image/book-winter-2.png" alt="book-winter-2">
-                                <button class="buy-book">Buy</button>
                             </div>
                             <div class="third-book">
                                 <h4 class="Staff-Picks">Staff Picks</h4>
@@ -144,8 +185,8 @@
                                     <span class="writer-book">By Erich Auerbach</span>
                                 </h3>
                                 <p class="book-text">Auerbach's engaging book places the 'Comedy' within the tradition of epic, tragedy, and philosophy in general, arguing for Dante's uniqueness as one who raised the individual and his drama of soul into something of divine significance—an inspired introduction to Dante's main themes.</p>
+                                <div class="btn-byu-book" id="3"> <button class="buy-book">Buy</button></div>
                                 <img class="winter-book" src="image/book-winter-3.png" alt="book-winter-1">
-                                <button class="buy-book">Buy</button>
                             </div>
                             <div class="fourth-book">
                                 <h4 class="Staff-Picks">Staff Picks</h4>
@@ -156,8 +197,8 @@
                                     <span class="writer-book">By Clive Irving</span>
                                 </h3>
                                 <p class="book-text">A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors have evolved and thrived as the modern world has changed around them.</p>
+                                <div class="btn-byu-book"id="4"> <button class="buy-book" >Buy</button></div>
                                 <img class="winter-book" src="image/book-winter-4.png" alt="book-winter-4">
-                                <button class="buy-book-off">Own</button>
                             </div>
                         </div>
                     </div>                    
@@ -172,8 +213,8 @@
                                     <span class="writer-book">By Stephen King</span>
                                 </h3>
                                 <p class="book-text">Powerful novel that takes you back to a nostalgic time, exploring both the beauty and danger and loss of innocence that is youth.</p>
+                                <div class="btn-byu-book" id="5"> <button class="buy-book">Buy</button></div>
                                 <img class="winter-book" src="image/book-spring-1.png" alt="book-spring-1">
-                                <button class="buy-book">Buy</button>
                             </div>
                             <div class="second-book">
                                 <h4 class="Staff-Picks">Staff Picks</h4>
@@ -184,8 +225,8 @@
                                     <span class="writer-book">By Toni Jenson</span>
                                 </h3>
                                 <p class="book-text">This memoir about the author's relationship with gun violence feels both expansive and intimate, resulting in a lyrical indictment of the way things are.</p>
+                                <div class="btn-byu-book" id="6"> <button class="buy-book">Buy</button></div>
                                 <img class="winter-book" src="image/book-spring-2.png" alt="book-spring-2">
-                                <button class="buy-book">Buy</button>
                             </div>
                             <div class="third-book">
                                 <h4 class="Staff-Picks">Staff Picks</h4>
@@ -196,8 +237,8 @@
                                     <span class="writer-book">By Alexandra Chang</span>
                                 </h3>
                                 <p class="book-text">A sardonic view of Silicon Valley culture, a meditation on race, and a journal of displacement and belonging, all in one form-defying package of spare prose.</p>
+                                <div class="btn-byu-book" id="7"> <button class="buy-book">Buy</button></div>
                                 <img class="winter-book" src="image/book-spring-3.png" alt="book-spring-3">
-                                <button class="buy-book">Buy</button>
                             </div>
                             <div class="fourth-book">
                                <h4 class="Staff-Picks">Staff Picks</h4>
@@ -208,8 +249,8 @@
                                     <span class="writer-book">By Angie Cruz</span>
                                 </h3>
                                 <p class="book-text">A fascinating story of a teenage girl who marries a man twice her age with the promise to bring her to America. Her marriage is an opportunity for her family to eventually immigrate. For fans of Isabel Allende and Julia Alvarez.</p>
+                                <div class="btn-byu-book" id="8"> <button class="buy-book">Buy</button></div>
                                 <img class="winter-book" src="image/book-spring-4.png" alt="book-spring-4">
-                                <button class="buy-book">Buy</button>
                             </div>
                         </div>
                     </div> 
@@ -224,8 +265,8 @@
                                         <span class="writer-book">By Pablo Fajardo & ​​Sophie Tardy-Joubert</span>
                                     </h3>
                                     <p class="book-text">Drawing and color by Damien Roudeau | This book illustrates the struggles of a group of indigenous Ecuadoreans as they try to sue the ChevronTexaco company for damage their oil fields did to the Amazon and her people</p>
+                                    <div class="btn-byu-book" id="9"> <button class="buy-book">Buy</button></div>
                                     <img class="winter-book" src="image/book-summer-1.png" alt="book-summer-1">
-                                    <button class="buy-book">Buy</button>
                                 </div>
                                 <div class="second-book">
                                     <h4 class="Staff-Picks">Staff Picks</h4>
@@ -236,8 +277,8 @@
                                         <span class="writer-book">By Yvon Chouinard</span>
                                     </h3>
                                     <p class="book-text">Chouinard—climber, businessman, environmentalist—shares tales of courage and persistence from his experience of founding and leading Patagonia, Inc. Full title: Let My People Go Surfing: The Education of a Reluctant Businessman, Including 10 More Years of Business Unusual.</p>
+                                    <div class="btn-byu-book" id="10"> <button class="buy-book">Buy</button></div>
                                     <img class="winter-book" src="image/book-summer-2.png" alt="book-summer-2">
-                                    <button class="buy-book">Buy</button>
                                 </div>
                                 <div class="third-book">
                                     <h4 class="Staff-Picks">Staff Picks</h4>
@@ -248,8 +289,8 @@
                                         <span class="writer-book">By Brenda Shaughnessy</span>
                                     </h3>
                                     <p class="book-text">This collection of bold and scathingly beautiful feminist poems imagines what comes after our current age of environmental destruction, racism, sexism, and divisive politics.</p>
+                                    <div class="btn-byu-book" id="11"> <button class="buy-book">Buy</button></div>
                                     <img class="winter-book" src="image/book-summer-3.png" alt="book-summer-3">
-                                    <button class="buy-book">Buy</button>
                                 </div>
                                 <div class="fourth-book">
                                     <h4 class="Staff-Picks">Staff Picks</h4>
@@ -260,8 +301,8 @@
                                         <span class="writer-book">By Kiana Davenport</span>
                                     </h3>
                                     <p class="book-text">An epic saga of seven generations of one family encompasses the tumultuous history of Hawaii as a Hawaiian woman gathers her four granddaughters together in an erotic tale of villains and dreamers, queens and revolutionaries, lepers and healers.</p>
+                                    <div class="btn-byu-book" id="12"> <button class="buy-book">Buy</button></div>
                                     <img class="winter-book" src="image/book-summer-4.png" alt="book-summer-4">
-                                    <button class="buy-book">Buy</button>
                                 </div>
                         </div>
                     </div>
@@ -276,8 +317,8 @@
                                         <span class="writer-book">By Renia White</span>
                                     </h3>
                                     <p class="book-text">White's impressive debut collection takes readers through and beyond the concepts of conversation and the casual - both what we say to each other and what we don't, examining the possibilities around how we construct and communicate identity. </p>
+                                    <div class="btn-byu-book" id="13"> <button class="buy-book">Buy</button></div>
                                     <img class="winter-book" src="image/book-autumn-1.png" alt="book-autumn-1">
-                                    <button class="buy-book">Buy</button>
                                 </div>
                                 <div class="second-book">
                                     <h4 class="Staff-Picks">Staff Picks</h4>
@@ -288,8 +329,8 @@
                                         <span class="writer-book">By Lou Ureneck</span>
                                     </h3>
                                     <p class="book-text">The harrowing story of an ordinary American and a principled Naval officer who, horrified by the burning of Smyrna, led an extraordinary rescue effort that saved a quarter of a million refugees from the Armenian Genocide</p>
+                                    <div class="btn-byu-book" id="14"> <button class="buy-book">Buy</button></div>
                                     <img class="winter-book" src="image/book-autumn-2.png" alt="book-autumn-2">
-                                    <button class="buy-book">Buy</button>
                                 </div>
                                 <div class="third-book">
                                     <h4 class="Staff-Picks">Staff Picks</h4>
@@ -300,8 +341,8 @@
                                         <span class="writer-book">By Howard Bryant</span>
                                     </h3>
                                     <p class="book-text">With the fall rolling around, one can't help but think of baseball's postseason coming up! And what better way to prepare for it than reading the biography of one of the game's all-time greatest performers, the Man of Steal, Rickey Henderson?</p>
+                                    <div class="btn-byu-book" id="15"> <button class="buy-book">Buy</button></div>
                                     <img class="winter-book" src="image/book-autumn-3.png" alt="book-autumn-3">
-                                   <button class="buy-book">Buy</button>
                                 </div>
                                 <div class="fourth-book">
                                     <h4 class="Staff-Picks">Staff Picks</h4>
@@ -312,8 +353,8 @@
                                         <span class="writer-book">By Megan Milks</span>
                                     </h3>
                                     <p class="book-text">Exes Tegan and Sara find themselves chained together by hairballs of codependency. A father and child experience the shared trauma of giving birth to gods from their wounds.</p>
+                                    <div class="btn-byu-book" id="16"> <button class="buy-book">Buy</button></div>
                                     <img class="winter-book" src="image/book-autumn-4.png" alt="book-autumn-4">
-                                    <button class="buy-book">Buy</button>
                                 </div>
                         </div>
                     </div>
@@ -443,11 +484,38 @@
                             <form class="library-card-form">
                                 <div class="library-card-input">
                                     <span class="card-input-name">Brooklyn Public Library</span>
-                                    <input type="text" class="readers-name" placeholder="Reader's name" required="" pattern="^[a-zA-Z]+$">
-                                    <input type="text" class="card-number" placeholder="Card number" required="" pattern="^[a-zA-Z]+$">
+                                    <input type="text" class="readers-name chek-card-profil" placeholder="Reader's name" >
+                                    <!-- <span class="text-error"></span> -->
+                                    <input type="text" class="card-number chek-card-profil" placeholder="Card number" >
+                                    <!-- <span class="text-error "></span> -->
                                 </div>
                                 <div class="library-card-button">
-                                    <button class="button-check-card">Check the card</button>
+                                    <button class="button-check-card" >Check the card</button>
+                                    <ul class="info-digital-card" style="display: none;">
+                                        <li class="info-digital-card-profil">
+                                            <span class="info-digital-card-in">Visits</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 10C13.2614 10 15.5 7.76142 15.5 5C15.5 2.23858 13.2614 0 10.5 0C7.73858 0 5.5 2.23858 5.5 5C5.5 7.76142 7.73858 10 10.5 10ZM17.5711 13.9289C19.4464 15.8043 20.5 18.3478 20.5 21H10.5L0.5 21C0.5 18.3478 1.55357 15.8043 3.42893 13.9289C5.3043 12.0536 7.84784 11 10.5 11C13.1522 11 15.6957 12.0536 17.5711 13.9289Z" fill="#BB945F"/>
+                                            </svg>
+                                            <span class="info-digital-card-numer"></span>
+                                        </li>
+                                        <li class="info-digital-card-profil">
+                                            <span class="info-digital-card-in">Bonuses</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                                <path d="M10 0L12.2249 3.31001L15.8779 2.00532L15.8249 6.05634L19.5106 7.25532L17.2 10.5L19.5106 13.7447L15.8249 14.9437L15.8779 18.9947L12.2249 17.69L10 21L7.77508 17.69L4.12215 18.9947L4.17508 14.9437L0.489435 13.7447L2.8 10.5L0.489435 7.25532L4.17508 6.05634L4.12215 2.00532L7.77508 3.31001L10 0Z" fill="#BB945F"/>
+                                            </svg>
+                                            <span class="info-digital-card-numer">1240</span>
+                                        </li>
+                                        <li class="info-digital-card-profil">
+                                            <span class="info-digital-card-in">Books</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                                <rect width="20" height="21" fill="#BB945F"/>
+                                                <rect x="2" width="1" height="19" fill="#826844"/>
+                                                <rect x="1" width="1" height="21" fill="white"/>
+                                            </svg>
+                                            <span class="info-digital-card-numer"></span>
+                                        </li>
+                                    </ul>
                                 </div>
                             </form>
                         </div>
@@ -507,8 +575,221 @@
                 </div>
             </div>
         </footer>
+        <div class="modal-window-register">
+            <div class="modal-register">
+                <div class="modal-register-window">
+                    <svg class="close-register" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+                        <path d="M2 16.8507L17 2.00003" stroke="#0C0C0E" stroke-width="3"/>
+                        <path d="M2 2.14926L17 17" stroke="#0C0C0E" stroke-width="3"/>
+                    </svg>
+                    <span class="register-span">Register</span>
+                    <form class="form-register-modal">
+                            <label class="label-register-modal">
+                              <span class="name-register-modal">First name</span>
+                              <input type="text" class="input-register-modal"  >
+                              <span class="text-error fill-error">Fill in this field</span>
+                              <span class="text-error name-error">Name must be more than 3 characters</span>
+                            </label>
+                            <label class="label-register-modal">
+                              <span class="name-register-modal">Last name</span>
+                              <input type="text" class="input-register-modal input-register-modal-2"  >
+                              <span class="text-error fill-error">Fill in this field</span>
+                              <span class="text-error name-error">Name must be more than 3 characters</span>
+                            </label>
+                            <label class="label-register-modal">
+                              <span class="name-register-modal">E-mail</span>
+                              <input type="text"  class="input-register-modal" id="email"  >
+                              <span class="text-error fill-error">Fill in this field</span>
+                              <span class="text-error email-error">Enter your email correctly</span>
+                            </label>
+                            <label class="label-register-modal">
+                              <span class="name-register-modal">Password</span>
+                              <input type="password" class="input-register-modal">
+                              <span class="text-error fill-error">Fill in this field</span>
+                              <span class="text-error pass-error">Password must be more than 8 characters</span>
+                            </label>
+                            <button class="btn-rigister-profile btn-rigister-profile-text" type="submit">Sign Up</button>
+                        </form>
+                    <span class="modal-register-span">Already have an account?
+                        <button class="btn-login" type="submit">Login</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="modal-window-login">
+            <div class="modal-login">
+                <div class="modal-login-window">
+                    <svg class="close-login" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+                        <path d="M2 16.8507L17 2.00003" stroke="#0C0C0E" stroke-width="3"/>
+                        <path d="M2 2.14926L17 17" stroke="#0C0C0E" stroke-width="3"/>
+                    </svg>
+                    <span class="login-span">Login</span>
+                    <form class="form-login-modal">
+                            <label class="label-login-modal">
+                              <span class="name-login-modal">E-mail or readers card</span>
+                              <input type="text"  class="input-login-modal"  >
+                              <span class="text-error fill-error-log">Fill in this field</span>
+                              <span class="text-error error-login">This mail or readers card is not registered</span>
+                            </label>
+                            <label class="label-login-modal">
+                              <span class="name-login-modal">Password</span>
+                              <input type="password" class="input-login-modal" >
+                              <span class="text-error fill-error-log">Fill in this field</span>
+                              <span class="text-error pass-error-login">Password must be more than 8 characters</span>
+                              <span class="text-error error-pass-login">Incorrect password</span>
+                            </label>
+                            <button class="btn-login-profile btn-login-profile-text" type="submit">Log In</button>
+                        </form>
+                    <span class="modal-login-span">Don’t have an account?
+                        <button class="btn-register" type="submit">Register</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="modal-window-profil">
+            <div class="modal-profil ">
+                <div class="modal-profil-window">
+                    <div class="left-container">
+                        <span class="initials-cont">
+                         
+                        </span>
+                        <span class="name-cont">
+                            
+                        </span>
+                    </div>
+                    <div class="rights-container">
+                        <span class="my-profil">
+                            My profile
+                        </span>
+                        <ul class="cards-profil">
+                            <li class="info-digital-card-profil info-profil-gap">
+                                <span class="info-digital-card-in profil-info-visits">Visits</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 10C13.2614 10 15.5 7.76142 15.5 5C15.5 2.23858 13.2614 0 10.5 0C7.73858 0 5.5 2.23858 5.5 5C5.5 7.76142 7.73858 10 10.5 10ZM17.5711 13.9289C19.4464 15.8043 20.5 18.3478 20.5 21H10.5L0.5 21C0.5 18.3478 1.55357 15.8043 3.42893 13.9289C5.3043 12.0536 7.84784 11 10.5 11C13.1522 11 15.6957 12.0536 17.5711 13.9289Z" fill="#BB945F"/>
+                                </svg>
+                                <span class="info-digital-card-numer"></span>
+                            </li>
+                            <li class="info-digital-card-profil info-profil-gap">
+                                <span class="info-digital-card-in profil-info-visits">Bonuses</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                    <path d="M10 0L12.2249 3.31001L15.8779 2.00532L15.8249 6.05634L19.5106 7.25532L17.2 10.5L19.5106 13.7447L15.8249 14.9437L15.8779 18.9947L12.2249 17.69L10 21L7.77508 17.69L4.12215 18.9947L4.17508 14.9437L0.489435 13.7447L2.8 10.5L0.489435 7.25532L4.17508 6.05634L4.12215 2.00532L7.77508 3.31001L10 0Z" fill="#BB945F"/>
+                                </svg>
+                                <span class="info-digital-card-numer">1240</span>
+                            </li>
+                            <li class="info-digital-card-profil info-profil-gap">
+                                <span class="info-digital-card-in profil-info-visits">Books</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                    <rect width="20" height="21" fill="#BB945F"/>
+                                    <rect x="2" width="1" height="19" fill="#826844"/>
+                                    <rect x="1" width="1" height="21" fill="white"/>
+                                </svg>
+                                <span class="info-digital-card-numer"></span>
+                            </li>
+                        </ul>
+                        <span class="rented-books">
+                            Rented books
+                        </span>
+                        <ul class="rented-books-byu">
+                            <li>The Last Queen, Clive Irving</li>
+                            <li>Dominicana, Angie Cruz</li>         
+                        </ul>
+                        <span class="card-num-cop">
+                            Card number
+                            <div>
+                                <div class="click-copi-text">
+                                    <input class="click-copi" type="text" value="${localStorage.getItem('cardNumber')}" readonly> &nbsp
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="0 0 14 12" fill="none">
+                                                    <rect x="2.46826" y="0.25" width="10.5917" height="9.5" rx="0.75" stroke="black" stroke-width="0.5"/>
+                                                    <rect x="0.25" y="2.25" width="10.5917" height="9.5" rx="0.75" fill="white" stroke="black" stroke-width="0.5"/>
+                                                  </svg></input>
+                                    </div>
+                            </div>
+                            <!-- <input class="click-copi" type="text" value=""> &nbsp
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="0 0 14 12" fill="none">
+                                <rect x="2.46826" y="0.25" width="10.5917" height="9.5" rx="0.75" stroke="black" stroke-width="0.5"/>
+                                <rect x="0.25" y="2.25" width="10.5917" height="9.5" rx="0.75" fill="white" stroke="black" stroke-width="0.5"/>
+                              </svg></input>
+                        </span> -->
+                    </div>
+                    <svg class="close-container-profil"  xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+                        <path d="M2 16.8507L17 2.00001" stroke="#0C0C0E" stroke-width="3"/>
+                        <path d="M2 2.14928L17 17" stroke="#0C0C0E" stroke-width="3"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="modal-window-librarycard">
+            <div class="modal-librarycard">
+                <div class="modal-librarycard-window">
+                    <div class="library-card-header">
+                        <div class="name-byu-library-card">
+                            <span class="buy-a-library-card">Buy a library card</span>
+                            <svg class="close-modal-librarycard" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+                                <path d="M2 16.8507L17 2" stroke="white" stroke-width="3"/>
+                                <path d="M2 2.14929L17 17" stroke="white" stroke-width="3"/>
+                            </svg>
+                        </div>
+                        <div class="buy-library-card-form">
+                            <div class="form-buy-librarycard">  
+                                  <form class="form-librarycard" name="myform">
+                                          <label class="form-librarycard-label">
+                                            <span class="name-form-librarycard">Bank card number</span>
+                                            <input type="text" name="cardcode" pattern="[0-9]{4}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}" step="0.01"  class="input-librarycard input-cardcode input-librarycard-widht1" >
+                                            <span class="text-error-buycard fill-error-buy">Fill in this field</span>
+                                            <span class="text-error-buycard digits-card-error">The card number must consist of 16 digits.</span>
+                                          </label>
+                                          <label class="form-librarycard-label" >
+                                            <span class="name-form-librarycard">Expiration code</span>
+                                            <div class="two-input-expiration code" name="datadiv">
+                                                <input type="text" name="datacardmo"  step="0.01"  class="input-librarycard input-date-mount input-librarycard-widht2" >
+                                                <span class="text-error-buycard buycard-div-mount fill-error-buy">Field</span>
+                                                <span class="text-error-buycard buycard-div-year date-error-mount">2 digits</span>
+                                                <input type="text" name="datacardyear"  step="0.01"  class="input-librarycard input-date-year input-librarycard-widht2" >
+                                                <span class="text-error-buycard buycard-div-year fill-error-buy">Field</span>
+                                                <span class="text-error-buycard buycard-div-year date-error-year">2 digits</span>
+                                                <!-- <span class="text-error-buycard fill-error-buy"> The card's expiration date code must contain 2 digits.</span> -->
+                                            </div>
+                                          </label>
+                                          <label class="form-librarycard-label">
+                                            <span class="name-form-librarycard">CVC</span>
+                                            <input type="text" name="cvc" step="0.01" class="input-librarycard input-cvc input-librarycard-widht2" >
+                                            <span class="text-error-buycard fill-error-buy">Fill in this field</span>
+                                            <span class="text-error-buycard cvc-error">CVC code must consist of 3 digits.</span>
+                                          </label>
+                                          <label class="form-librarycard-label">
+                                            <span class="name-form-librarycard">Cardholder name</span>
+                                            <input type="text" class="input-librarycard input-cardholder-name input-librarycard-widht1" onkeypress="noDigits(event)">
+                                            <span class="text-error-buycard fill-error-buy">Fill in this field</span>
+                                          </label>
+                                          <label class="form-librarycard-label">
+                                            <span class="name-form-librarycard">Postal code</span>
+                                            <input type="text" name="postalcode" step="0.01" class="input-librarycard input-postal-code input-librarycard-widht1" >
+                                            <span class="text-error-buycard fill-error-buy">Fill in this field</span>
+                                            <span class="text-error-buycard postal-code-error">Postal code must consist of 6 digits</span>
+                                          </label>
+                                          <label class="form-librarycard-label">
+                                            <span class="name-form-librarycard ">City / Town</span>
+                                            <input type="text"  class="input-librarycard input-city-town input-librarycard-widht1" onkeypress="noDigits(event)" >
+                                            <span class="text-error-buycard fill-error-buy">Fill in this field</span>
+                                          </label>
+                                          <div class="btn-librarycard">
+                                            <button class="btn-buy-librarycard" type="submit">Buy</button>
+                                            <span class="price-buy-librarycard">$ 25.00</span>
+                                          </div> 
+                                  </form>
+                            </div>
+                            <div class="librarycard-descriptions">
+                               <span class="about-buy-card">If you are live, work, attend school, or pay property taxes in New York State, you can get a $25 digital library card right now using this online form. Visitors to New York State can also use this form to apply for a temporary card.
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="js/script.js" ></script>
-    <script src="js/index.js"></script>   
+    <script src="js/index.js"></script>
 </body>
 </html>
