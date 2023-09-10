@@ -43,7 +43,7 @@ const checkCardBtn = document.querySelector('.button-check-card');
 if (localStorage.getItem('userRegistered') !== 'true') {
 checkCardBtn.addEventListener('click', (event) => {
 //отключить кнопку 
-event.stopPropagation();
+event.preventDefault();
 });
 //отключить дефолтное поведение 
   checkCardForm.addEventListener('submit', (event) => {
@@ -387,7 +387,133 @@ function generateCardNumber() {
    });
    
 
+//проверка инпутов логин 
 
+//проверка на пустоту
+// Получить все элементы input
+const inputsLogin = document.getElementsByClassName("input-login-modal");
+const errorSpansLogin = document.getElementsByClassName("fill-error-log");
+const logInButton = document.querySelector(".btn-login-profile");
+
+// Отслеживать событие нажатия на кнопку login
+logInButton.addEventListener("click", function(event) {
+  event.preventDefault();
+
+  for (let i = 0; i < inputsLogin.length; i++) {
+    if (inputsLogin[i].value.trim() === "") {
+      errorSpansLogin[i].classList.add("show-error");
+    } else {
+      errorSpansLogin[i].classList.remove("show-error");
+    }
+  }
+});
+
+// Отслеживать событие ввода в поля ввода и удалять класс show-error
+for (let i = 0; i < inputsLogin.length; i++) {
+  inputsLogin[i].addEventListener("input", function() {
+    errorSpansLogin[i].classList.remove("show-error");
+  });
+}
+
+// проверка на верность логина
+
+
+const emailUser = localStorage.getItem('email')
+const passUser = localStorage.getItem('password')
+const emailLogin = document.querySelector('.input-login-modal[type="text"]');
+const passwordLogin = document.querySelector('.input-login-modal[type="password"]');
+const cardNumberUser = localStorage.getItem ('cardNumber')
+ 
+
+// проверка логина и карточки на верность
+logInButton.addEventListener("click", function(event) {
+  event.preventDefault();
+  if (emailLogin.value !== '') {
+    if (emailUser !== emailLogin.value && cardNumberUser !== emailLogin.value) {
+      document.querySelector('.error-login').classList.add('show-error');
+    } else {
+      document.querySelector('.error-login').classList.remove('show-error');
+      
+    }
+   
+  }
+});
+
+emailLogin.addEventListener("input", function() {
+  document.querySelector('.error-login').classList.remove('show-error');
+});
+
+
+// проверка перед входом данных 
+logInButton.addEventListener("click", function(event) {
+  event.preventDefault();
+  if (emailLogin.value !== '') {
+    if (emailUser !== emailLogin.value && cardNumberUser !== emailLogin.value || passUser !== passwordLogin.value ) {
+    } else {
+      
+      logInButton?.addEventListener("click" , () => {
+        localStorage.setItem('userAuthorized', true);
+                      //увелечение значения счетчика заходов 
+                 // Получаем текущее значение из localStorage
+                 let userVisits = localStorage.getItem('userVisits');
+                 // Проверяем, есть ли уже значение в localStorage
+                 if (userVisits === null) {
+                   // Если значения нет, устанавливаем его равным 1
+                   userVisits = 1;
+                 } else {
+                   // Если значение есть, увеличиваем его на 1
+                   userVisits = parseInt(userVisits) + 1;
+                 }
+                 // Обновляем значение в localStorage
+                 localStorage.setItem('userVisits', userVisits.toString());
+                 // Функция, которая будет выполняться при клике на кнопку
+                 function increaseUserVisits() {
+                   // Увеличиваем значение в localStorage
+                   userVisits = parseInt(localStorage.getItem('userVisits')) + 1;
+                   // Обновляем значение в localStorage
+                   localStorage.setItem('userVisits', userVisits.toString());
+                 }
+                 // Назначаем функцию увеличения значения на событие "click" кнопки
+                 logInButton.addEventListener('click', increaseUserVisits);          
+        location.reload()
+       });
+    }
+   
+  }
+});
+
+
+// проверка пароля на правильность 
+logInButton.addEventListener("click", function(event) {
+  event.preventDefault();
+  if (passwordLogin.value.length > 8) {
+    if (passUser !== passwordLogin.value) {
+      document.querySelector('.error-pass-login').classList.add('show-error');
+    } else {
+      document.querySelector('.error-pass-login').classList.remove('show-error');
+    }
+  }
+});
+
+
+passwordLogin.addEventListener("input", function() {
+  document.querySelector('.error-pass-login').classList.remove('show-error');
+});
+
+// проверка пасс на длину 
+// Функция для проверки пароля 
+const passwordLoginLeng = document.querySelectorAll('.input-login-modal');
+
+passwordLoginLeng.forEach(input => {
+  input.addEventListener('input', () => {
+    const passLogin = input.parentNode.querySelector('.pass-error-login');
+    if (input.value.length < 8 && input.value.length > 0) {
+      passLogin.classList.add('show-error');
+    } else {
+      passLogin.classList.remove('show-error');
+    }
+  });
+});
 
 // модалка Lib card
 
@@ -699,133 +825,133 @@ checkCardBtn.addEventListener("click", (e) =>{
 
 
 
-//проверка инпутов логин 
+// //проверка инпутов логин 
 
-//проверка на пустоту
-// Получить все элементы input
-const inputsLogin = document.getElementsByClassName("input-login-modal");
-const errorSpansLogin = document.getElementsByClassName("fill-error-log");
-const logInButton = document.querySelector(".btn-login-profile");
+// //проверка на пустоту
+// // Получить все элементы input
+// const inputsLogin = document.getElementsByClassName("input-login-modal");
+// const errorSpansLogin = document.getElementsByClassName("fill-error-log");
+// const logInButton = document.querySelector(".btn-login-profile");
 
-// Отслеживать событие нажатия на кнопку login
-logInButton.addEventListener("click", function(event) {
-  event.preventDefault();
+// // Отслеживать событие нажатия на кнопку login
+// logInButton.addEventListener("click", function(event) {
+//   event.preventDefault();
 
-  for (let i = 0; i < inputsLogin.length; i++) {
-    if (inputsLogin[i].value.trim() === "") {
-      errorSpansLogin[i].classList.add("show-error");
-    } else {
-      errorSpansLogin[i].classList.remove("show-error");
-    }
-  }
-});
+//   for (let i = 0; i < inputsLogin.length; i++) {
+//     if (inputsLogin[i].value.trim() === "") {
+//       errorSpansLogin[i].classList.add("show-error");
+//     } else {
+//       errorSpansLogin[i].classList.remove("show-error");
+//     }
+//   }
+// });
 
-// Отслеживать событие ввода в поля ввода и удалять класс show-error
-for (let i = 0; i < inputsLogin.length; i++) {
-  inputsLogin[i].addEventListener("input", function() {
-    errorSpansLogin[i].classList.remove("show-error");
-  });
-}
+// // Отслеживать событие ввода в поля ввода и удалять класс show-error
+// for (let i = 0; i < inputsLogin.length; i++) {
+//   inputsLogin[i].addEventListener("input", function() {
+//     errorSpansLogin[i].classList.remove("show-error");
+//   });
+// }
 
-// проверка на верность логина
+// // проверка на верность логина
 
 
-const emailUser = localStorage.getItem('email')
-const passUser = localStorage.getItem('password')
-const emailLogin = document.querySelector('.input-login-modal[type="text"]');
-const passwordLogin = document.querySelector('.input-login-modal[type="password"]');
-const cardNumberUser = localStorage.getItem ('cardNumber')
+// const emailUser = localStorage.getItem('email')
+// const passUser = localStorage.getItem('password')
+// const emailLogin = document.querySelector('.input-login-modal[type="text"]');
+// const passwordLogin = document.querySelector('.input-login-modal[type="password"]');
+// const cardNumberUser = localStorage.getItem ('cardNumber')
  
 
-// проверка логина и карточки на верность
-logInButton.addEventListener("click", function(event) {
-  event.preventDefault();
-  if (emailLogin.value !== '') {
-    if (emailUser !== emailLogin.value && cardNumberUser !== emailLogin.value) {
-      document.querySelector('.error-login').classList.add('show-error');
-    } else {
-      document.querySelector('.error-login').classList.remove('show-error');
+// // проверка логина и карточки на верность
+// logInButton.addEventListener("click", function(event) {
+//   event.preventDefault();
+//   if (emailLogin.value !== '') {
+//     if (emailUser !== emailLogin.value && cardNumberUser !== emailLogin.value) {
+//       document.querySelector('.error-login').classList.add('show-error');
+//     } else {
+//       document.querySelector('.error-login').classList.remove('show-error');
       
-    }
+//     }
    
-  }
-});
+//   }
+// });
 
-emailLogin.addEventListener("input", function() {
-  document.querySelector('.error-login').classList.remove('show-error');
-});
+// emailLogin.addEventListener("input", function() {
+//   document.querySelector('.error-login').classList.remove('show-error');
+// });
 
 
-// проверка перед входом данных 
-logInButton.addEventListener("click", function(event) {
-  event.preventDefault();
-  if (emailLogin.value !== '') {
-    if (emailUser !== emailLogin.value && cardNumberUser !== emailLogin.value || passUser !== passwordLogin.value ) {
-    } else {
+// // проверка перед входом данных 
+// logInButton.addEventListener("click", function(event) {
+//   event.preventDefault();
+//   if (emailLogin.value !== '') {
+//     if (emailUser !== emailLogin.value && cardNumberUser !== emailLogin.value || passUser !== passwordLogin.value ) {
+//     } else {
       
-      logInButton?.addEventListener("click" , () => {
-        localStorage.setItem('userAuthorized', true);
-                      //увелечение значения счетчика заходов 
-                 // Получаем текущее значение из localStorage
-                 let userVisits = localStorage.getItem('userVisits');
-                 // Проверяем, есть ли уже значение в localStorage
-                 if (userVisits === null) {
-                   // Если значения нет, устанавливаем его равным 1
-                   userVisits = 1;
-                 } else {
-                   // Если значение есть, увеличиваем его на 1
-                   userVisits = parseInt(userVisits) + 1;
-                 }
-                 // Обновляем значение в localStorage
-                 localStorage.setItem('userVisits', userVisits.toString());
-                 // Функция, которая будет выполняться при клике на кнопку
-                 function increaseUserVisits() {
-                   // Увеличиваем значение в localStorage
-                   userVisits = parseInt(localStorage.getItem('userVisits')) + 1;
-                   // Обновляем значение в localStorage
-                   localStorage.setItem('userVisits', userVisits.toString());
-                 }
-                 // Назначаем функцию увеличения значения на событие "click" кнопки
-                 logInButton.addEventListener('click', increaseUserVisits);          
-        location.reload()
-       });
-    }
+//       logInButton?.addEventListener("click" , () => {
+//         localStorage.setItem('userAuthorized', true);
+//                       //увелечение значения счетчика заходов 
+//                  // Получаем текущее значение из localStorage
+//                  let userVisits = localStorage.getItem('userVisits');
+//                  // Проверяем, есть ли уже значение в localStorage
+//                  if (userVisits === null) {
+//                    // Если значения нет, устанавливаем его равным 1
+//                    userVisits = 1;
+//                  } else {
+//                    // Если значение есть, увеличиваем его на 1
+//                    userVisits = parseInt(userVisits) + 1;
+//                  }
+//                  // Обновляем значение в localStorage
+//                  localStorage.setItem('userVisits', userVisits.toString());
+//                  // Функция, которая будет выполняться при клике на кнопку
+//                  function increaseUserVisits() {
+//                    // Увеличиваем значение в localStorage
+//                    userVisits = parseInt(localStorage.getItem('userVisits')) + 1;
+//                    // Обновляем значение в localStorage
+//                    localStorage.setItem('userVisits', userVisits.toString());
+//                  }
+//                  // Назначаем функцию увеличения значения на событие "click" кнопки
+//                  logInButton.addEventListener('click', increaseUserVisits);          
+//         location.reload()
+//        });
+//     }
    
-  }
-});
+//   }
+// });
 
 
-// проверка пароля на правильность 
-logInButton.addEventListener("click", function(event) {
-  event.preventDefault();
-  if (passwordLogin.value.length > 8) {
-    if (passUser !== passwordLogin.value) {
-      document.querySelector('.error-pass-login').classList.add('show-error');
-    } else {
-      document.querySelector('.error-pass-login').classList.remove('show-error');
-    }
-  }
-});
+// // проверка пароля на правильность 
+// logInButton.addEventListener("click", function(event) {
+//   event.preventDefault();
+//   if (passwordLogin.value.length > 8) {
+//     if (passUser !== passwordLogin.value) {
+//       document.querySelector('.error-pass-login').classList.add('show-error');
+//     } else {
+//       document.querySelector('.error-pass-login').classList.remove('show-error');
+//     }
+//   }
+// });
 
 
-passwordLogin.addEventListener("input", function() {
-  document.querySelector('.error-pass-login').classList.remove('show-error');
-});
+// passwordLogin.addEventListener("input", function() {
+//   document.querySelector('.error-pass-login').classList.remove('show-error');
+// });
 
-// проверка пасс на длину 
-// Функция для проверки пароля 
-const passwordLoginLeng = document.querySelectorAll('.input-login-modal');
+// // проверка пасс на длину 
+// // Функция для проверки пароля 
+// const passwordLoginLeng = document.querySelectorAll('.input-login-modal');
 
-passwordLoginLeng.forEach(input => {
-  input.addEventListener('input', () => {
-    const passLogin = input.parentNode.querySelector('.pass-error-login');
-    if (input.value.length < 8 && input.value.length > 0) {
-      passLogin.classList.add('show-error');
-    } else {
-      passLogin.classList.remove('show-error');
-    }
-  });
-});
+// passwordLoginLeng.forEach(input => {
+//   input.addEventListener('input', () => {
+//     const passLogin = input.parentNode.querySelector('.pass-error-login');
+//     if (input.value.length < 8 && input.value.length > 0) {
+//       passLogin.classList.add('show-error');
+//     } else {
+//       passLogin.classList.remove('show-error');
+//     }
+//   });
+// });
 
 // if (emailUser !== emailLogin.value && cardNumberUser !== emailLogin.value || passUser !== passwordLogin.value ){
 //   logInButton?.addEventListener("click" , () => {
