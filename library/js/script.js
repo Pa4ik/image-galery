@@ -45,12 +45,12 @@ checkCardBtn.addEventListener('click', (event) => {
 //отключить кнопку 
 event.stopPropagation();
 event.preventDefault();
-});
+})}else {checkCardForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  event.stopPropagation();
+});};
 //отключить дефолтное поведение 
-  checkCardForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-});
-}
+
 
 // слайдер 
 const swiper = new Swiper('.swiper', {
