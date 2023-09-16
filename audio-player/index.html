@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/svg/icon.png">
+<body>
+    <header class="header">
+        <div class="icon-div"><img  class="icon" src="assets/svg/icon.png" alt="icon"></div>
+        <p class="header-text">Audio Player</p>
+    </header>
+    <main class="main">
+        <div class="main-container">
+            <img class="back-img" id="background" src="assets/img/lemonade.png">
+            <audio src="assets/audio/beyonce.mp3" id="audio"></audio>
+            <div class="audio-player">
+                <img id="cover" src="assets/img/lemonade.png">  
+                <div class="song-name">Don't Hurt Yourself</div>
+                <div class="song-executor">Beyonce</div>
+                <input type="range" id="song-length" min="0" max="233.717551" value="0" >
+                <div class="currentTime">0:00</div>
+                <div class="durationTime">0:00</div>
+                <img id="prevSong" src="assets/svg/backward.png">
+                <img id="play-pause" src="assets/svg/play.png">
+                <img id="nextSong" src="assets/svg/forward.png">
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-div">
+            <p class="">2023</p>
+            <a class="link" href="https://rs.school/js-stage0/" target="_blank"><p>The Rolling Scopes School</p></a>
+            <a class="link" href="https://github.com/Pa4ik" target="_blank"><p>Maxim</p></a>
+        </div>
+    </footer>   
+</body>
+<script src="js/index.js"></script>
+</html>
