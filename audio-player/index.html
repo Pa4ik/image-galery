@@ -13,9 +13,18 @@
     </header>
     <main class="main">
         <div class="main-container">
-            <img class="back-img" src="assets/img/lemonade.png">
+            <img class="back-img" id="background" src="assets/img/lemonade.png">
             <audio src="assets/audio/beyonce.mp3" id="audio"></audio>
             <div class="audio-player">
+                <img id="cover" src="assets/img/lemonade.png">  
+                <div class="song-name">Don't Hurt Yourself</div>
+                <div class="song-executor">Beyonce</div>
+                <input type="range" id="song-length" min="0" max="233.717551" value="0" >
+                <div class="currentTime">0:00</div>
+                <div class="durationTime">0:00</div>
+                <img id="prevSong" src="assets/svg/backward.png">
+                <img id="play-pause" src="assets/svg/play.png">
+                <img id="nextSong" src="assets/svg/forward.png">
             </div>
         </div>
     </main>
