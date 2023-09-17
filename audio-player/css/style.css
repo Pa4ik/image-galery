@@ -47,8 +47,8 @@ body{
 
 .audio-player{
     max-width: 390px;
-    max-height: 600px;
-    background-color: #3b3a3d;
+    max-height:580px;
+    background-color: #17151b;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -250,4 +250,8 @@ input[type=range] {
 
 .link:hover{
     color: blueviolet;
+}
+
+.svg-size{
+  width: 100px;
 }
