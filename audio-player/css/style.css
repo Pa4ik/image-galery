@@ -63,7 +63,10 @@ body{
     padding: 40px;
     max-width: 310px;
     border-radius: 12%;
+    transition: 1s;
 }
+
+
 
 .song-name{
     color: #fff;
