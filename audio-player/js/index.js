@@ -4,7 +4,7 @@ const player = document.querySelector('.main-container')
 const playBtn = document.querySelector('.pl-pa')
 const prevBtn = document.getElementById('prevSong')
 const nextBtn = document.getElementById('nextSong')
-const currentTime = document.querySelector('.currentTime')
+const currentTimes = document.querySelector('.currentTime')
 const durationTime = document.querySelector('.durationTime')
 const progressBar = document.getElementById('song-length')
 const songExecutor = document.querySelector('.song-executor')
@@ -74,6 +74,7 @@ function nextSongs (){
 }
 nextBtn.addEventListener('click', nextSongs)
 
+
 //Prev song
 function prevSongs (){
     songIndex--
@@ -86,3 +87,28 @@ function prevSongs (){
     playSong()
 }
 prevBtn.addEventListener('click', prevSongs);
+
+
+// Progress bar 
+function upProgress(event){
+    const {duration, currentTime} = event.srcElement
+    const progressPercent = (currentTime / duration) * 100
+    progressBar.value = `${progressPercent}`
+    durationTime.innerHTML = `${duration}`
+    currentTimes.innerHTML = `${currentTime}`
+}
+audio.addEventListener('timeupdate', upProgress)
+
+
+// перемотка 
+function setProgress (event){
+   const width = this.clientWidth
+   const clickX = event.offsetX
+   const duration = audio.duration
+   audio.currentTime = ( clickX / width) * duration
+}
+progressBar.addEventListener('click', setProgress)
+
+
+//auto play
+audio.addEventListener('ended', nextSongs)
