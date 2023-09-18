@@ -1,5 +1,3 @@
-console.log('40/60');
-
 const player = document.querySelector('.main-container')
 const playBtn = document.querySelector('.pl-pa')
 const prevBtn = document.getElementById('prevSong')
@@ -89,13 +87,24 @@ function prevSongs (){
 prevBtn.addEventListener('click', prevSongs);
 
 
+//Время в нормальный формат
+function formatTime(time) {
+    let minutes = Math.floor(time / 60);
+    let seconds = Math.floor(time % 60);
+    if (seconds < 10) {
+       seconds = "0" + seconds;
+    }
+    return `${minutes}:${seconds}`;
+ }
+
+
 // Progress bar 
 function upProgress(event){
     const {duration, currentTime} = event.srcElement
     const progressPercent = (currentTime / duration) * 100
     progressBar.value = `${progressPercent}`
-    durationTime.innerHTML = `${duration}`
-    currentTimes.innerHTML = `${currentTime}`
+    currentTimes.innerHTML = formatTime(currentTime);
+    durationTime.innerHTML = formatTime(duration);
 }
 audio.addEventListener('timeupdate', upProgress)
 
@@ -112,3 +121,7 @@ progressBar.addEventListener('click', setProgress)
 
 //auto play
 audio.addEventListener('ended', nextSongs)
+
+duration.setMinutes(min [sec])
+alert(duration)
+
