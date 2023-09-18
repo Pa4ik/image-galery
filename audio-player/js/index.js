@@ -122,6 +122,3 @@ progressBar.addEventListener('click', setProgress)
 //auto play
 audio.addEventListener('ended', nextSongs)
 
-duration.setMinutes(min [sec])
-alert(duration)
-
