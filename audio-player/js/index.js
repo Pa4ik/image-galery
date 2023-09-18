@@ -1,4 +1,4 @@
-console.log('10/60');
+console.log('40/60');
 
 const player = document.querySelector('.main-container')
 const playBtn = document.querySelector('.pl-pa')
@@ -16,9 +16,9 @@ const backImg = document.querySelector('.back-img')
 
 
 // название песен 
-const songs = ['Don t Hurt Yourself', 'Don t Start Now'];
+const songs = ['Don t Hurt Yourself', 'Don t Start Now' , 'Don t Speak' , 'Moi Lolita' , 'Incognito','Love Like Mine', 'MIDDLE OF THE NIGHT', 'Ceux qui rêvent' , 'Mental Funeral'];
 //артисты
-const artist = ['Beyonce', 'Dua Lipa']
+const artist = ['Beyonce', 'Dua Lipa' , 'No Doubt' , 'Alizée' , 'bludnymph' , 'Stela Cole', 'Elley Duhé', 'Pomme', 'Ehle ']
 // первая песня 
 let songIndex = 0;
  
