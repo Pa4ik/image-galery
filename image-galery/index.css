@@ -95,7 +95,7 @@
     background-position: center;
     background-size: cover;
   }
-   
+
   .photoby{
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
@@ -138,4 +138,12 @@
 
 .svg-size{
   width: 100px;
+}
+
+
+@media (max-width: 595px){
+  #header{
+    justify-content: space-around;
+  
+  }
 }

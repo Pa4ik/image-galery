@@ -1,10 +1,27 @@
 const CLIENT_ID = 'ofyoLJAcFjrVVZfB4DXLhMk2zI_iIOUtAIQK2HTaZs8'
 const img = document.getElementById('img-galer')
+const inputSearch = document.querySelector(".inputcl")
+const search = document.getElementById('search')
 
-let state = []
+
+
+
+
+
+document.querySelector("#input").addEventListener("keydown", (event) => {
+    if (event.key == "Enter")
+    fetchPhotos();
+  });
+  
+  document.querySelector("#search").addEventListener("click", () => {
+    fetchPhotos();
+  });
+
+
+let state = {}
 
 const fetchPhotos = async () => {
-        const url = `https://api.unsplash.com/photos/random?client_id=${CLIENT_ID}&count=30`;
+        const url = `https://api.unsplash.com/photos/random?client_id=${CLIENT_ID}&count=30&query=`+input.value;
         const response = await fetch(url);
         const data = await response.json();
 
@@ -12,8 +29,6 @@ const fetchPhotos = async () => {
             state = data;
             setPhotos();
         }
-
-        console.log(data)  
     };
 
  const renderItem = () => {
