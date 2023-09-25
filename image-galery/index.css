@@ -75,9 +75,41 @@
 
   /* MAIN */
   .maincl{
-     height: 86vh; /*УДАЛИТЬ ПОТОМ */
+    background-color: rgb(177, 177, 190);
+    padding: 20px;
+  }
+  
+  #img-galer{
+    max-width: 1440px;
+    margin: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:20px;
   }
 
+  .img{
+    width: 380px;
+    height: 220px;
+    background-position: center;
+    background-size: cover;
+  }
+   
+  .photoby{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+  }
+
+  .phby{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+  }
+
+  .inst-svg{
+    width: 18px;
+  }
+    
 
   /* FOOTER */
   .footer{
