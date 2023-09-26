@@ -68,6 +68,16 @@
     transition: 0.7s;
   }
 
+  #close{
+    color: blueviolet;
+    position: absolute;
+    cursor: pointer;
+    top: 28%;
+    right: 11%;
+    transition: 0.7s;
+  }
+
+  #close:hover,
   #search:hover{
     color:black;
   }
@@ -77,10 +87,12 @@
   .maincl{
     background-color: rgb(177, 177, 190);
     padding: 20px;
+
   }
   
   #img-galer{
     max-width: 1440px;
+
     margin: auto;
     height: auto;
     display: flex;
@@ -94,6 +106,7 @@
     height: 220px;
     background-position: center;
     background-size: cover;
+    margin-bottom: 5px;
   }
 
   .photoby{

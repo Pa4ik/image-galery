@@ -18,6 +18,12 @@ document.querySelector("#input").addEventListener("keydown", (event) => {
   });
 
 
+  document.getElementById("close").onclick = function(e) {
+    document.getElementById("input").value = "";
+  }
+
+
+
 let state = {}
 
 const fetchPhotos = async () => {
