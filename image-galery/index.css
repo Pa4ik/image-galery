@@ -87,7 +87,7 @@
   .maincl{
     background-color: rgb(177, 177, 190);
     padding: 20px;
-
+    min-height: 82vh;
   }
   
   #img-galer{
@@ -160,3 +160,4 @@
   
   }
 }
+
